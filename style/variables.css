@@ -1,0 +1,28 @@
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+@-webkit-keyframes downArrow {
+  0% {
+    opacity: 1;
+    padding-top: 0; }
+  60% {
+    opacity: 0;
+    padding-top: 20px; }
+  100% {
+    opacity: 0;
+    padding-top: 20px; } }
+
+@keyframes downArrow {
+  0% {
+    opacity: 1;
+    padding-top: 0; }
+  60% {
+    opacity: 0;
+    padding-top: 20px; }
+  100% {
+    opacity: 0;
+    padding-top: 20px; } }
+
+/*# sourceMappingURL=variables.css.map */
