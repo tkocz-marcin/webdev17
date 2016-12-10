@@ -4,6 +4,9 @@ $(document).ready(function() {
    var stickyNav = function(){
    var scrollTop = $(window).scrollTop();
 
+
+
+
    if (scrollTop > stickyNavTop) { 
 		$('.nav').removeClass('no-display');
    } else {
@@ -38,12 +41,10 @@ function opacityContent(){
 	  
 };
    
-   
 /* scroll \/ */
 jQuery(function($)
 	{
 		$.scrollTo(0);			
-//		$('#home').click(function() { $.scrollTo($('body'), 500); });
 		$('#about_us_arrow').click(function() { $.scrollTo($('#about_us'), 300); });
 		$('#nav_1').click(function() { $.scrollTo($('#about_us'), 500); });
 		$('#nav_2').click(function() { $.scrollTo($('#who_we_are'), 500); });
@@ -55,9 +56,16 @@ jQuery(function($)
 
 	}
 );
+let isFirefox = typeof InstallTrigger !== 'undefined';
+
 $(window).scroll(function() {
-      opacityContent();
+    if(!isFirefox) {
+  		opacityContent();
+	}
    });
+
 window.onload = function() {
-  opacityContent();
+	if(!isFirefox) {
+  		opacityContent();
+	}
 };
